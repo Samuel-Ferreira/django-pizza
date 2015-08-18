@@ -8,7 +8,11 @@
         <ul>
        {% for pizza in pizzas %}
             <li>
-    <h2> {{pizza.name}} - R$ {{pizza.price}}</h2> 
+  <h2> {{pizza.name}} - R$ {{pizza.price}}</h2> 
+        {% if pizza.picture %}
+            <img src="{{ pizza.picture.url }}" 
+        width="100px" alt="{{ pizza.name }} picture" />
+    {% endif %}  
     <div>{{ pizza.ingredients }}</div>
 <hr>
 </li>
