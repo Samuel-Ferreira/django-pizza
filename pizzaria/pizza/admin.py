@@ -5,6 +5,6 @@ from .models import Pizza
 
 class PizzaAdmin(admin.ModelAdmin):
     search_fields = ['name']
-
+    list_display = ['name', 'ingredients']
 
 admin.site.register(Pizza, PizzaAdmin)
